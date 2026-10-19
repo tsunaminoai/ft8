@@ -1,0 +1,22 @@
+# Zig build artifacts
+.zig-cache/
+zig-out/
+
+# WASM output (built artifact, not source)
+web/ft8.wasm
+
+# Nix
+result
+result-*
+.direnv/
+
+# Claude Code local settings (personal overrides, not shared)
+.claude/settings.local.json
+
+# Audit reports (generated, not source)
+audit/
+
+# Editor
+.vscode/
+*.swp
+*~

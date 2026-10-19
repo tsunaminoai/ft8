@@ -1,0 +1,8 @@
+.{
+    .name = .ft8_demo,
+    .fingerprint = 0xceed5f0b8da8ae75,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{},
+    .paths = .{"."},
+}

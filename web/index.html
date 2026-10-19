@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FT8 Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'">
+</head>
+<body>
+
+<div id="loading" role="status" aria-label="Loading WASM module">
+  <div class="spinner"></div>
+  <p>Loading ft8.wasm…</p>
+</div>
+
+<header>
+  <h1>FT8 Demo</h1>
+  <nav aria-label="Main navigation">
+    <a href="#tx" class="active">TX Pipeline</a>
+    <a href="#rx">RX Pipeline</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- TX Tab -->
+  <section id="tx" class="tab-panel active" aria-label="Transmit pipeline">
+    <h2>TX Pipeline - Encode a Message</h2>
+    <p>FT8 is a digital radio mode used worldwide for amateur radio contacts. Each 12.64-second transmission encodes a short message into audio tones that can be decoded even when barely audible above the noise floor. Step through the full encode chain below.</p>
+    <div class="step-list" id="tx-steps" role="list" aria-label="TX pipeline steps">
+      <!-- Populated by tx-demo.js -->
+    </div>
+  </section>
+
+  <!-- RX Tab -->
+  <section id="rx" class="tab-panel" aria-label="Receive pipeline">
+    <h2>RX Pipeline - Decode a Signal</h2>
+    <p>Watch how a received FT8 audio signal is decoded back into text - the same steps your radio software performs. Use the microphone input with the TX page open in another window to try a real over-the-air decode.</p>
+    <div class="step-list" id="rx-steps" role="list" aria-label="RX pipeline steps">
+      <!-- Populated by rx-demo.js -->
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  FT8 Demo - MIT license
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
